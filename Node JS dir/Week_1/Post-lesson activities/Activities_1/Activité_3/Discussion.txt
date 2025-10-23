@@ -1,0 +1,40 @@
+ Que signifient __filename, __dirname, module, et exports ? 
+
+__filename
+
+Représente le chemin absolu complet du fichier en cours d’exécution.
+
+Elle permet de savoir exactement où se trouve le fichier sur le disque
+
+ __dirname
+
+Représente le dossier (répertoire) dans lequel se trouve le fichier exécuté.
+
+C’est pratique pour construire des chemins de fichiers sans dépendre du système d’exploitation.
+
+- module
+
+C’est un objet spécial créé par Node.js pour chaque fichier.
+
+Il contient des informations sur le module courant, comme :
+
+son nom,
+
+son chemin (filename),
+
+et surtout, ce qu’il exporte via la propriété module.exports.
+
+- exports
+
+C’est une raccourci (ou alias) vers module.exports.
+
+Il sert à ajouter des fonctions ou variables que tu veux rendre accessibles à d’autres fichiers.
+
+Pourquoi exports = fonction() ne fonctionne pas comme prévu ? 
+
+La commande exports = fonction() ne fonctionne pas comme prévu, car dans Node.js, seule la valeur de module.exports est réellement exportée lorsqu’on utilise require().
+Au départ, exports est simplement une référence vers module.exports, ce qui permet d’ajouter des fonctions avec exports.nomFonction = ....
+
+-Quelle relation existe entre exports et module.exports ? 
+
+Dans Node.js, chaque fichier est un module, et module.exports est l’objet qui est réellement exporté lorsqu’on utilise require(). La variable exports est simplement une référence vers module.exports, ce qui permet d’ajouter facilement des fonctions ou des variables au module. Tant qu’on ajoute des propriétés à exports, elles sont visibles via require(). En revanche, si on réassigne exports à une nouvelle valeur, cette nouvelle valeur ne sera pas exportée, car seule la valeur de module.exports est renvoyée. En résumé, exports est un raccourci pratique pour module.exports, mais c’est toujours module.exports qui définit ce que le module exporte.
