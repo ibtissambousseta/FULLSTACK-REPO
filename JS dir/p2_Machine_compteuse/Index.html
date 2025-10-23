@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cash Register Machine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🛒 Cash Register Machine</h1>
+
+  <!-- Tableau-->
+  <div class="products">
+    <h2>📦 PRODUITS</h2>
+    <table>
+      <tr>
+        <th>Produit</th>
+        <th>Prix ($)</th>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td>300</td>
+      </tr>
+      <tr>
+        <td>Smart TV</td>
+        <td>220</td>
+      </tr>
+      <tr>
+        <td>Gaming Console</td>
+        <td>150</td>
+      </tr>
+    </table>
+  </div>
+
+ 
+  <div class="controls">
+    <input type="text" id="itemInput" placeholder="tapez le nom du Produit(ex: Phone)">
+    <button onclick="addItemToCart()">Add </button>
+  </div>
+
+  <div class="cart">
+    <h2>Panier</h2>
+    <ul id="cartList"></ul>
+  </div>
+
+
+  <div class="payment">
+    <input type="number" id="paymentInput" placeholder="  saisie le montant a payer">
+    <button onclick="payNow()">Paiement</button>
+  </div>
+
+ 
+  <div id="messages"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

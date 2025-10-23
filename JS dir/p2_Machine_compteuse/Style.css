@@ -1,0 +1,18 @@
+/*Table*/
+.products table {
+  width: 50%;
+  margin: 10px auto;
+  border-collapse: collapse;
+}
+
+.products th, .products td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.products th {
+  background: #007bff;
+  color: white;
+}
+
