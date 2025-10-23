@@ -1,7 +1,0 @@
-Discussion :
-
-Quelle différence entre module.exports = fonction et module.exports = { … } ?
-Dans quels cas préférez-vous l’un ou l’autre ?
-
-La différence entre module.exports = fonction et module.exports = { … } réside dans le nombre d’éléments exportés et la façon de les importer dans un autre fichier.
-on utilise module.exports = fonction quand le module effectue une seule action bien définie, et module.exports = { … } quand on veut regrouper plusieurs outils ou fonctions dans un même module pour mieux organiser le code.

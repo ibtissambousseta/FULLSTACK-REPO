@@ -1,7 +1,0 @@
-Si l’écouteur est enregistré après l’émission de l’événement :
-L’événement ne sera pas entendu, car il a déjà été émis avant l’enregistrement de l’écouteur.
-En d’autres termes, un écouteur (emitter.on(...)) ne réagit qu’aux événements émis après sa création.
-
-Peut-on avoir plusieurs écouteurs pour un même événement ?
-Oui, on peut enregistrer plusieurs écouteurs sur le même événement.
-Quand l’événement est émis, tous les écouteurs associés à cet événement seront exécutés, dans l’ordre où ils ont été enregistrés.
